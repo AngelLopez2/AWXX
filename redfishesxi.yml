@@ -1,11 +1,10 @@
 - hosts: all
-  connection: local
   name: Manage System Power - Turn on
   gather_facts: False
 
   tasks:
 
   - name: Turn system power on
-    redfish_command:
-      category: Systems
-      command: PowerOn
+    local_action: >
+       redfish category=System command=PowerOn baseuri={{192.168.0.4}}
+       user={{admin}} password={{admin}}
