@@ -1,4 +1,6 @@
----
-  apt:
-    name: zabbix-agent
-    state: latest
+- hosts: all
+  tasks:
+  - name: Install Zabbix-Agent
+    apt:
+      name: zabbix-agent
+      state: latest
