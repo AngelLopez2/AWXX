@@ -1,8 +1,6 @@
----
 - hosts: all
   tasks:
-  - name: update all
-  apt:
-    name: "*"
-    state: latest
-    update_cache: yes
+  - name: upgrade all packages
+    apt:
+      name: '*'
+      state: latest
