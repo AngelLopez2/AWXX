@@ -1,0 +1,4 @@
+---
+  apt:
+    name: zabbix-agent
+    state: latest
