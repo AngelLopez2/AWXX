@@ -2,5 +2,6 @@
   tasks:
   - name: Install Zabbix-Agent
     apt:
+      force_apt_get: yes
       name: zabbix-agent
       state: latest
