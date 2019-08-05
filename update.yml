@@ -2,5 +2,6 @@
   tasks:
   - name: upgrade all packages
     apt:
+      force_apt_get: yes
       name: '*'
       state: latest
