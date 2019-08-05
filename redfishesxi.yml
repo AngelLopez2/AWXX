@@ -1,6 +1,0 @@
-- hosts: all
-  tasks:
-  - name: Turn system power on
-    local_action: >
-       redfish category=System command=PowerOn baseuri={{192.168.0.4}}
-       user={{admin}} password={{admin}}
