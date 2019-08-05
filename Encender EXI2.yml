@@ -1,8 +1,0 @@
-- hosts: all
-  tasks:
-  - name: Encender esxi2
-    ipmi_power:
-      name: esxi2.angellab.es
-      user: admin
-      password: admin
-      state: boot

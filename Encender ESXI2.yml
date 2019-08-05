@@ -1,0 +1,5 @@
+- hosts: 192.168.0.12
+  tasks:
+  - name: Encender esxi
+    ipmi_power:
+      state: boot
