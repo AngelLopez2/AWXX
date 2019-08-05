@@ -1,0 +1,6 @@
+---
+- ipmi_power:
+    name: esxi1.angellab.es
+    user: admin
+    password: admin
+    state: boot
