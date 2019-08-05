@@ -1,0 +1,12 @@
+- hosts: all
+  tasks:
+  - name: Enable universe&multiverse repository
+    apt_repository:
+      repo: "{{ item }}"
+    loop:
+      - "deb http://archive.ubuntu.com/ubuntu/ bionic universe"
+      - "deb http://archive.ubuntu.com/ubuntu/ bionic multiverse"
+      - "deb http://archive.ubuntu.com/ubuntu/ bionic-updates universe"
+      - "deb http://archive.ubuntu.com/ubuntu/ bionic-updates multiverse"
+      - "deb http://security.ubuntu.com/ubuntu/ bionic-security universe"
+      - "deb http://security.ubuntu.com/ubuntu/ bionic-security multiverse"
