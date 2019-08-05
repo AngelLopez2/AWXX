@@ -2,4 +2,4 @@
   tasks:
   - name: Encender esxi
     ipmi_power:
-      state: boot
+      state: on
