@@ -1,0 +1,7 @@
+- hosts: all
+  tasks:
+  - name: Download zabbix_agentd.conf
+  get_url:
+    backup: yes
+    url: https://github.com/AngelLopez2/AWXX/blob/master/zabbix_agentd.conf
+    dest: /etc/zabbix/zabbix_agentd.conf
