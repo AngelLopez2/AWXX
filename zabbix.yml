@@ -8,8 +8,8 @@
 
   - name: Download zabbix_agentd.conf
     get_url:
-    url: https://raw.githubusercontent.com/AngelLopez2/AWXX/master/zabbix_agentd.conf
-    dest: /etc/zabbix/zabbix_agentd.conf
+      url: https://raw.githubusercontent.com/AngelLopez2/AWXX/master/zabbix_agentd.conf
+      dest: /etc/zabbix/zabbix_agentd.conf
 
   - name: Restart zabbix-agent service
     service:
