@@ -1,0 +1,17 @@
+- hosts: all
+  tasks:
+  - name: Install Zabbix-Agent
+    apt:
+      force_apt_get: yes
+      name: zabbix-agent
+      state: latest
+
+  - name: Download zabbix_agentd.conf
+    get_url:
+    url: https://raw.githubusercontent.com/AngelLopez2/AWXX/master/zabbix_agentd.conf
+    dest: /etc/zabbix/zabbix_agentd.conf
+
+  - name: Restart zabbix-agent service
+    service:
+      name: zabbix-agent
+      state: restarted
