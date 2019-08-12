@@ -1,5 +1,10 @@
 - hosts: all
   tasks:
+  - name: Borrar zabbix_agentd.conf
+    file:
+      state: absent
+      path: /etc/zabbix/zabbix_agentd.conf
+
   - name: Download zabbix_agentd.conf
     get_url:
     url: https://raw.githubusercontent.com/AngelLopez2/AWXX/master/zabbix_agentd.conf
